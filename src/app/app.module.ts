@@ -10,6 +10,9 @@ import { HomeBannerComponent } from './components/home-banner/home-banner.compon
 
 import Swiper from 'swiper';
 import { register } from 'swiper/element/bundle';
+import { AboutUsComponent } from './components/about-us/about-us.component';
+import { AlternatingProjectsComponent } from './components/alternating-projects/alternating-projects.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 register();
 
@@ -18,7 +21,10 @@ register();
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    HomeBannerComponent
+    HomeBannerComponent,
+    AboutUsComponent,
+    AlternatingProjectsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
