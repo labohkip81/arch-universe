@@ -1,0 +1,129 @@
+<nav class="min-h-20 hidden lg:flex bg-slate-100 space-x-4 py-6 px-12 transition-night" >
+  <div>
+      <img
+          src="/assets/logo.png"
+          alt=""
+          class="h-12 object-scale-down mr-32"
+          srcset=""
+      />
+  </div>
+  <div class="flex flex-col justify-end w-full px-12 ">
+      <div class="grid grid-cols-7 uppercase">
+          <a class="text-lg font-bold mt-2 hidden lg:block">HOME</a>
+          <a class="text-lg font-bold mt-2 hidden lg:block">ABOUT</a>
+          <a class="text-lg font-bold mt-2 hidden lg:block">PROJECTS</a>
+          <a class="text-lg font-bold mt-2 hidden lg:block">SHOP</a>
+          <a class="text-lg font-bold mt-2 hidden lg:block">CONTACTS</a>
+          <div class="flex col-span-2 justify-end">
+              <button
+                  type="submit"
+                  class=" hover:bg-gray-500 border-black border-4 px-6 py-3 hidden lg:block"
+                  cdkFocusInitial
+              >
+                  Register your interest
+              </button>
+              <div class="flex items-col justify-center h-fit ml-4 my-auto">
+                  <svg
+                     *ngIf="!dayNightService.day"
+                      (click)="toggleDayNight()"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="white"
+                      class="size-6"
+                  >
+                      <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+                      />
+                  </svg>
+
+                  <svg
+                   *ngIf="dayNightService.day"
+                   (click)="toggleDayNight()"
+                   xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="black" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                  </svg>
+
+              </div>
+          </div>
+      </div>
+  </div>
+</nav>
+
+<!-- Mobile header-->
+<header
+[ngClass]="{'transition-day bg-white text-black': dayNightService.day, 'transition-night bg-black text-white': !dayNightService.day,}"
+class="flex lg:hidden z-20 p-2 lg:absolute lg:top-0 lg:left-0 lg:w-full relative transition-all duration-300 bg-transparentshadow-sm"
+>
+<div
+class="container justify-between sm:py-3 sm -mt-1 mx-auto flex w-full md:items-center lg:py-0  max-w-none lg:container"
+[ngClass]="{'transition-day bg-white text-black': dayNightService.day, 'transition-night bg-black text-white': !dayNightService.day,}"
+
+>
+    <div class="self-center">
+        <a routerLink="/">
+            <img alt="" src="/assets/logo_black.png" *ngIf="dayNightService.day" class="h-9 object-scale-down">
+            <img alt="" src="/assets/logo2.png"  *ngIf="!dayNightService.day" class="h-9 object-scale-down">
+        </a>
+    </div>
+    <nav
+    *ngIf="dayNightService.showSideBar"
+    [ngClass]="{'transition-day bg-white text-black': dayNightService.day, 'transition-night bg-black text-white': !dayNightService.day,}"
+
+     class="flex flex-col p-4 lg:hidden w-full overflow-auto absolute top-full left-0 border-b shadow-small xs:rounded-bl-md xs:rounded-br-md lg:static lg:shadow-none lg:text-sm lg:mx-auto lg:justify-center">
+         <p class="py-3 w-full">Overview</p>
+         <hr>
+         <p class="py-3">Residences</p>
+         <hr>
+         <p class="py-3">Map</p>
+         <hr>
+         <p class="py-3">Floor Plans</p>
+         <hr>
+         <p class="py-3 z-[9999]">Contacts</p>
+    </nav>
+    <div class="flex justify-self-end space-x-4 self-center ml-5 lg:hidden rtl:ml-0 rtl:mr-5 p-4">
+
+      <svg
+      *ngIf="!dayNightService.day"
+       (click)="toggleDayNight()"
+       xmlns="http://www.w3.org/2000/svg"
+       fill="none"
+       viewBox="0 0 24 24"
+       stroke-width="1.5"
+       stroke="white"
+       class="size-6 mt-1"
+   >
+       <path
+           stroke-linecap="round"
+           stroke-linejoin="round"
+           d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+       />
+   </svg>
+
+   <svg
+    *ngIf="dayNightService.day"
+    (click)="toggleDayNight()"
+    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="black" class="size-6 mt-1">
+     <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+   </svg>
+        <button id="mobile-menu" (click)="this.toggleSideBar()" class="hamburger-button bg-w" title="Mobile Menu" type="button">
+            <span class="w-6 h-0.5 my-1.5 block bg-black transition-transform duration-300 origin-top-right"
+             [ngClass]="{'bg-black': dayNightService.day, 'bg-white': !dayNightService.day}"
+            ></span>
+            <span
+            class="w-6 h-0.5 my-1.5 block bg-black transition-transform duration-300"
+            [ngClass]="{'bg-black': dayNightService.day, 'bg-white': !dayNightService.day}"
+            ></span>
+            <span
+            class="w-6 h-0.5 my-1.5 block bg-black transition-transform duration-300 origin-bottom-right"
+            [ngClass]="{'bg-black': dayNightService.day, 'bg-white': !dayNightService.day}"
+            ></span>
+        </button>
+
+
+    </div>
+</div>
+</header>
