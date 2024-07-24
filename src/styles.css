@@ -1,14 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: 'hero';
+  src: url(assets/hero.otf) format("opentype");
+}
+
+@font-face {
+  font-family: 'code-bold';
+  src: url(assets/code-bold.otf) format("opentype");
+}
+
+
 
 html,
 body {
     height: 100%;
-}
-body {
     margin: 0;
-    font-family: "Helvetica Neue";
+    font-family: "hero";
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.code-bold {
+  font-family: 'code-bold';
+}
+
+
+h1{
+  font-family: 'hero';
+}
+
+h2{
+  font-family: 'hero';
+}
+h3{
+  font-family: 'hero';
+}
+h4{
+  font-family: 'hero';
+}
+h5{
+  font-family: 'hero';
+}
+h6{
+  font-family: 'hero';
+}
+html {
+  scroll-behavior: smooth;
+}
+p{
+  font-family: 'hero';
+}
+
+a{
+  font-family: 'hero';
+}
+
+span{
+  font-family: 'hero';
+}
