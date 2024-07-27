@@ -13,6 +13,7 @@ import { register } from 'swiper/element/bundle';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { AlternatingProjectsComponent } from './components/alternating-projects/alternating-projects.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SliderComponent } from './components/slider/slider.component';
 
 register();
 
@@ -24,7 +25,8 @@ register();
     HomeBannerComponent,
     AboutUsComponent,
     AlternatingProjectsComponent,
-    FooterComponent
+    FooterComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
