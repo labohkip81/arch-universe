@@ -1,4 +1,4 @@
-<nav class="min-h-20 hidden lg:flex bg-black text-white space-x-4 py-6 px-12 transition-night" >
+<nav class="min-h-20 hidden lg:flex bg-[#0B0F24] text-white space-x-4 py-6 px-12 transition-night" >
   <div>
       <img
           src="/assets/logo_.jpeg"
@@ -9,11 +9,11 @@
   </div>
   <div class="flex flex-col justify-end w-full px-12 ">
       <div class="grid grid-cols-7 uppercase">
-          <a class="text-lg font-bold mt-2 hidden lg:block">HOME</a>
-          <a class="text-lg font-bold mt-2 hidden lg:block">ABOUT</a>
-          <a class="text-lg font-bold mt-2 hidden lg:block">PROJECTS</a>
+          <a class="text-lg font-bold mt-2 hidden lg:block" href="#home">HOME</a>
+          <a class="text-lg font-bold mt-2 hidden lg:block" href="#about">ABOUT</a>
+          <a class="text-lg font-bold mt-2 hidden lg:block" href="#projects">PROJECTS</a>
           <a class="text-lg font-bold mt-2 hidden lg:block" href="https://best.app.mshoppaci.com" target="_blank">SHOP</a>
-          <a class="text-lg font-bold mt-2 hidden lg:block">CONTACTS</a>
+          <a class="text-lg font-bold mt-2 hidden lg:block" href="#contacts">CONTACTS</a>
           <div class="flex col-span-2 justify-end">
               <button
                   type="submit"
@@ -74,15 +74,15 @@ class="container justify-between sm:py-3 sm -mt-1 mx-auto flex w-full md:items-c
     [ngClass]="{'transition-day bg-white text-black': dayNightService.day, 'transition-night bg-black text-white': !dayNightService.day,}"
 
      class="flex flex-col p-4 lg:hidden w-full overflow-auto absolute top-full left-0 border-b shadow-small xs:rounded-bl-md xs:rounded-br-md lg:static lg:shadow-none lg:text-sm lg:mx-auto lg:justify-center">
-         <p class="py-3 w-full">Home</p>
+         <a href="#home" class="py-3 w-full">Home</a>
          <hr>
-         <p class="py-3">About</p>
+         <a href="#about" class="py-3">About</a>
          <hr>
-         <p class="py-3">Projects</p>
+         <a href="#projects" class="py-3">Projects</a>
          <hr>
-         <p class="py-3" href="https://best.app.mshoppaci.com" target="_blank">Shop</p>
+         <a class="py-3" href="https://best.app.mshoppaci.com" target="_blank">Shop</a>
          <hr>
-         <p class="py-3 z-[9999]">Contacts</p>
+         <a href="contacts" class="py-3 z-[9999]">Contacts</a>
     </nav>
     <div class="flex justify-self-end space-x-4 self-center ml-5 lg:hidden rtl:ml-0 rtl:mr-5 p-4">
 
