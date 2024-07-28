@@ -55,7 +55,7 @@
 
 <!-- Mobile header-->
 <header
-[ngClass]="{'transition-day bg-white text-black': dayNightService.day, 'transition-night bg-black text-white': !dayNightService.day,}"
+[ngClass]="{'transition-day bg-white text-black': dayNightService.day, 'transition-night bg-[#0C0F24] text-white': !dayNightService.day,}"
 class="flex lg:hidden z-20 p-2 lg:absolute lg:top-0 lg:left-0 lg:w-full relative transition-all duration-300 bg-transparentshadow-sm"
 >
 <div
@@ -71,7 +71,7 @@ class="container justify-between sm:py-3 sm -mt-1 mx-auto flex w-full md:items-c
     </div>
     <nav
     *ngIf="dayNightService.showSideBar"
-    [ngClass]="{'transition-day bg-white text-black': dayNightService.day, 'transition-night bg-black text-white': !dayNightService.day,}"
+    [ngClass]="{'transition-day bg-white text-black': dayNightService.day, 'transition-night bg-[#0C0F24] text-white': !dayNightService.day,}"
 
      class="flex flex-col p-4 lg:hidden w-full overflow-auto absolute top-full left-0 border-b shadow-small xs:rounded-bl-md xs:rounded-br-md lg:static lg:shadow-none lg:text-sm lg:mx-auto lg:justify-center">
          <a href="#home" class="py-3 w-full">Home</a>
